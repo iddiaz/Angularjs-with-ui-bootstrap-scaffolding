@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Scafolding Angularjs + angular-ui-bootstrap</title>
+    <link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.min.css">
+</head>
+<body ng-app="app" ng-controller="alertController as vm">
+
+    
+    
+
+    <div class="container">
+        <h2>{{vm.message}}</h2>
+        <uib-alert type="warning" ng-if="vm.show" close="vm.closeAlert()">This is a warning alert!</uib-alert>
+        <uib-alert type="success" dismiss-on-timeout="5000" ng-if="vm.showAlert" close="vm.closeTimer()">This is a success alert with timeout!</uib-alert>
+    </div>
+
+
+
+    <!--dependencies-->
+    <script src="./node_modules/angular/angular.min.js"></script>
+    <script src="./node_modules/angular-animate/angular-animate.min.js"></script>
+    <script src="./node_modules/angular-ui-bootstrap/dist/ui-bootstrap-tpls.js"></script>
+
+    <!--app-->
+    <script src="./app/app.js"></script>
+
+    <!--controllers-->
+    <script src="./app/controllers/alertCtrl.js"></script>
+    
+</body>
+</html>
